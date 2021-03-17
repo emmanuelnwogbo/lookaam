@@ -3,7 +3,7 @@
     <Header />
     <div class="landing__jumbotron">
       <figure>
-        <img src="~/assets/landing/introduction.jpg" alt="" />
+        <img src="~/assets/landing/introduction.jpg" alt="">
       </figure>
     </div>
 
