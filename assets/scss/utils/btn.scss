@@ -1,0 +1,20 @@
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-colored {
+  background: $color-primary;
+  border-radius: 3rem;
+  color: #fff;
+}
+
+.btn-landing {
+  font-weight: 700;
+}
+
+.btn-transparent {
+    color: $color-black;
+    background: transparent;
+}
