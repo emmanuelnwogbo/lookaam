@@ -47,9 +47,8 @@ export default {
   position: relative;
   overflow: hidden;
   border-radius: 0.4rem;
-  height: 28rem;
-  width: 28rem;
-  margin-right: 3rem;
+  height: 33rem;
+  width: 34rem;
   flex-shrink: 0;
 
   &__area {

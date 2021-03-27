@@ -15,6 +15,18 @@
 }
 
 .btn-transparent {
-    color: $color-black;
-    background: transparent;
+  color: $color-black;
+  background: transparent;
+}
+
+.btn-faded {
+  background: #dfe5ec;
+  border-radius: 1.8rem;
+  cursor: pointer;
+}
+
+.btn-double {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }

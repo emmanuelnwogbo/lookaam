@@ -1,0 +1,497 @@
+<template>
+  <div class="search primary-padding">
+    <div class="search__top">
+      <div
+        class="search__top--item btn-faded btn-double"
+        @click="toggleshowFilter"
+      >
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 15 10"
+            fill="none"
+          >
+            <path
+              d="M3.33334 4H11.6667V6H3.33334V4ZM0.833344 0H14.1667V2H0.833344V0ZM5.83334 8H9.16668V10H5.83334V8Z"
+              fill="#222222"
+            />
+          </svg>
+        </span>
+        <span>Filter</span>
+      </div>
+      <div class="search__top--item btn-faded btn-double">
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 16 18"
+            fill="none"
+          >
+            <path
+              d="M5.5 8.16667H3.83333V9.83334H5.5V8.16667ZM8.83333 8.16667H7.16667V9.83334H8.83333V8.16667ZM12.1667 8.16667H10.5V9.83334H12.1667V8.16667ZM13.8333 2.33334H13V0.666672H11.3333V2.33334H4.66667V0.666672H3V2.33334H2.16667C1.24167 2.33334 0.508333 3.08334 0.508333 4.00001L0.5 15.6667C0.5 16.1087 0.675595 16.5326 0.988155 16.8452C1.30072 17.1577 1.72464 17.3333 2.16667 17.3333H13.8333C14.75 17.3333 15.5 16.5833 15.5 15.6667V4.00001C15.5 3.08334 14.75 2.33334 13.8333 2.33334ZM13.8333 15.6667H2.16667V6.5H13.8333V15.6667Z"
+              fill="#222222"
+            />
+          </svg>
+        </span>
+        <span>Date</span>
+      </div>
+    </div>
+    <div class="search__container">
+      <div class="search__cards">
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="search__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="search__filters"
+      v-bind:class="{
+        showFilter,
+      }"
+      @click.stop="toggleshowFilter"
+    >
+      <div class="search__filterscontent" @click.stop="showFilter = true">
+        <div class="search__filterscontent--heading">
+          <h2>Filters</h2>
+          <span @click.stop="toggleshowFilter">x</span>
+        </div>
+        <div class="search__filterscontent--typeofplace">
+          <h2>Type of place</h2>
+          <div
+            class="search__filterscontent--dropdown search__filterscontent--idealforcont"
+          >
+            <select name="" id="">
+              <option
+                value=""
+                v-for="(item, index) in filterDropdown"
+                :key="index"
+              >
+                {{ item }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="search__filterscontent--idealfor">
+          <h2>Ideal for</h2>
+          <div class="search__filterscontent--idealforcont">
+            <div class="search__filterscontent--idealforitem">
+              <span>Production</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-1"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-1"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Dinner</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-2"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-2"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Reception</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-3"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-3"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Wedding</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-4"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-4"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Meeting</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-5"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-5"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Party</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-6"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-6"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Performance</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-7"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-7"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Conference</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-8"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-8"></label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="search__filterscontent--amenities">
+          <h2>Amenities</h2>
+          <div class="search__filterscontent--idealforcont">
+            <div class="search__filterscontent--idealforitem">
+              <span>Production</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-9"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-9"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Dinner</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-10"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-10"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Reception</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-11"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-11"></label>
+              </span>
+            </div>
+            <div class="search__filterscontent--idealforitem">
+              <span>Wedding</span>
+              <span>
+                <input
+                  class="styled-checkbox"
+                  id="styled-checkbox-12"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-12"></label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="search__filterscontent--btn">
+          <button class="btn btn-colored btn-landing">Show Results</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search__loadmore">
+      <span><p>Loading more...</p></span
+      ><span>
+        <p>Sorry, no result with the location</p>
+      </span>
+    </div>
+  </div>
+</template>
+
+<script>
+import LocationCard from "@/components/LocationCard";
+
+export default {
+  name: "Search",
+  data() {
+    return {
+      showFilter: false,
+    };
+  },
+  methods: {
+    toggleshowFilter() {
+      this.showFilter ? (this.showFilter = false) : (this.showFilter = true);
+    },
+  },
+  components: {
+    LocationCard,
+  },
+  computed: {
+    filterDropdown() {
+      return ["Studio", "Church", "Atrium"];
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+.search {
+  &__top {
+    display: flex;
+    padding: 3rem 0;
+    font-size: 2rem;
+
+    &--item {
+      padding: 1.3rem 3rem;
+      margin-right: 4rem;
+      display: flex;
+      align-items: center;
+
+      & span {
+        display: inline-block;
+
+        &:nth-child(2) {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__cards {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__card {
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &__filters {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+
+    &.showFilter {
+      display: flex;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  &__filterscontent {
+    background: #fff;
+    height: 80vh;
+    width: 60vw;
+    border-radius: 1.2rem;
+    padding: 4rem;
+
+    & h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    &--heading {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & span {
+        cursor: pointer;
+        font-size: 3rem;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    &--idealforcont {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    &--idealforitem {
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+      justify-content: space-between;
+      width: 41rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+
+      &:not(:nth-child(2n)) {
+        padding-right: 5rem;
+      }
+    }
+
+    &--btn {
+      position: relative;
+      margin-top: 2rem;
+
+      & button {
+        right: 0;
+        position: absolute;
+        height: 4.5rem;
+        width: 16rem;
+        font-size: 1.45rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__loadmore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    padding: 4rem 0;
+  }
+}
+</style>

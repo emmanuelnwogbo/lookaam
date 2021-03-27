@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  padding: 1.8rem 5rem;
+  padding: 1.8rem 6rem 1.8rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,8 +46,8 @@ export default {
   left: 0;
   width: 100vw;
   background: $color-background;
-  z-index: 2;
-  transition: all .3s ease;
+  z-index: 4;
+  transition: all 0.3s ease;
 
   &__search {
     background: $color-primary-fade;
@@ -74,7 +74,7 @@ export default {
   &__btns {
     & button {
       padding: 1.1rem;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
 
       &.btn-colored {
         width: 11rem;

@@ -1,9 +1,23 @@
 <template>
   <div>
+    <Header />
     <Nuxt />
   </div>
 </template>
 
+<script>
+import Header from "@/components/Header";
+
+export default {
+  components: {
+    Header,
+  },
+  mounted() {
+    const val = window.screen.availWidth * 0.0411;
+    document.getElementsByTagName("html")[0].style.fontSize = val + "%";
+  },
+};
+</script>
 <style lang="scss">
 *,
 *::after,
@@ -15,7 +29,7 @@
 
 html {
   // This defines what 1rem is
-  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  /*font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
   @include respond(tab-land) {
     // width < 1200?
@@ -29,7 +43,7 @@ html {
 
   @include respond(big-desktop) {
     font-size: 75%; //1rem = 12, 12/16
-  }
+  }*/
 }
 
 body {
@@ -37,7 +51,7 @@ body {
   min-height: 100vh;
   background: $color-background;
   color: $color-black;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   @include respond(tab-port) {
     padding: 0;

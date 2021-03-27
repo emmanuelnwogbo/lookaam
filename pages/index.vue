@@ -1,9 +1,8 @@
 <template>
   <div class="landing">
-    <Header />
     <div class="landing__jumbotron">
       <figure>
-        <img src="~/assets/landing/introduction.jpg" alt="">
+        <img src="~/assets/landing/introduction.jpg" alt="" />
       </figure>
     </div>
 
@@ -181,12 +180,10 @@
 </template>
 
 <script>
-import Header from "@/components/Header";
 import LocationCard from "@/components/LocationCard";
 
 export default {
   components: {
-    Header,
     LocationCard,
   },
 };
@@ -217,6 +214,10 @@ export default {
     display: flex;
     align-items: center;
     overflow: hidden;
+
+    & .locationcard {
+      margin-right: 2.6rem;
+    }
   }
 
   &__seemore {
@@ -232,13 +233,13 @@ export default {
 
   &__blue {
     background: $color-primary;
-    height: 30rem;
+    height: 40rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &--left {
-      font-size: 3.7rem;
+      font-size: 4.5rem;
       color: #fff;
     }
 
@@ -249,8 +250,9 @@ export default {
     &--action {
       & button {
         color: $color-primary;
-        padding: 1rem 2.5rem;
+        padding: 1.5rem 2.5rem;
         border-radius: 3rem;
+        font-size: 1.7rem;
       }
     }
   }
