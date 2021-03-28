@@ -2,7 +2,7 @@
   <div class="landing">
     <div class="landing__jumbotron">
       <figure>
-        <img src="~/assets/imgs/introduction.jpg" alt="" />
+        <img src="https://aws-course-nwogbo.s3.eu-west-2.amazonaws.com/Introduction.jpg" alt="" />
       </figure>
     </div>
 
