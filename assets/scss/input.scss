@@ -1,0 +1,55 @@
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+  &-label {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $color-black;
+  }
+
+  &-area {
+    background: $color-primary-fade;
+    display: inline-block;
+    height: 4.5rem;
+    border-radius: 3rem;
+    width: 45rem;
+    margin-top: 0.7rem;
+    position: relative;
+
+    & input {
+      outline: none;
+      border: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 3rem;
+      background: transparent;
+      padding: 1rem 2rem;
+
+      &::placeholder {
+        color: $color-black;
+        opacity: 0.1;
+      }
+    }
+  }
+
+  &-eyee {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &-eye {
+    height: 1.2rem;
+    width: 1.7rem;
+  }
+
+  &-password {
+  }
+}

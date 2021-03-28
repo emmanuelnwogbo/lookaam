@@ -1,5 +1,61 @@
 <template>
   <div class="property primary-padding">
+    <div
+      class="property__share"
+      v-bind:class="{
+        showShare,
+      }"
+      @click.stop="toggleshowShare"
+    >
+      <div class="property__share--content" @click.stop="showShare = true">
+        <div class="property__share--top">
+          <h2 class="property__share--h2">Share</h2>
+          <span @click.stop="toggleshowShare">X</span>
+        </div>
+        <div class="property__share--items">
+          <div class="property__share--item">
+            <span>
+              <img src="~/assets/svg/facebookshare.svg" alt="" />
+            </span>
+            <span>
+              <p>Facebook</p>
+            </span>
+          </div>
+          <div class="property__share--item">
+            <span>
+              <img src="~/assets/svg/twittershare.svg" alt="" />
+            </span>
+            <span>
+              <p>Twitter</p>
+            </span>
+          </div>
+          <div class="property__share--item">
+            <span>
+              <img src="~/assets/svg/whatsappshare.svg" alt="" />
+            </span>
+            <span>
+              <p>Whatsapp</p>
+            </span>
+          </div>
+          <div class="property__share--item">
+            <span>
+              <img src="~/assets/svg/copylink.svg" alt="" />
+            </span>
+            <span>
+              <p>Copy link</p>
+            </span>
+          </div>
+          <div class="property__share--item">
+            <span>
+              <img src="~/assets/svg/emailicon.svg" alt="" />
+            </span>
+            <span>
+              <p>Email</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="property__side property__left">
       <div class="property__gallery">
         <figure>
@@ -29,7 +85,7 @@
           <span><p>by Jane Doe</p></span>
           <span><img src="~/assets/svg/verified.svg" alt="" /></span>
         </div>
-        <div class="property__host--right">
+        <div class="property__host--right" @click="open_hostpage">
           <span><p>Contact Host</p></span>
         </div>
       </div>
@@ -81,7 +137,7 @@
             <p>save</p>
           </span>
         </div>
-        <div class="property__saveshare--area">
+        <div class="property__saveshare--area" @click.stop="toggleshowShare">
           <span></span>
           <span>
             <p>share</p>
@@ -135,6 +191,11 @@
 <script>
 export default {
   name: "Property",
+  data() {
+    return {
+      showShare: false,
+    };
+  },
   computed: {
     amenities() {
       return [
@@ -168,6 +229,14 @@ export default {
       ];
     },
   },
+  methods: {
+    open_hostpage(page) {
+      this.$router.push("/property/host");
+    },
+    toggleshowShare() {
+      this.showShare ? (this.showShare = false) : (this.showShare = true);
+    },
+  },
 };
 </script>
 
@@ -175,6 +244,79 @@ export default {
 .property {
   display: flex;
   padding-top: 11rem;
+
+  &__share {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+
+    &.showShare {
+      display: flex;
+      z-index: 10;
+      opacity: 1;
+    }
+
+    &--top {
+      position: relative;
+      padding: 1.5rem 3rem;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 300;
+
+      border-bottom: .1px solid $color-black;
+
+      & span {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 2rem;
+        font-size: 1.7rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+
+    &--items {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 26rem;
+      font-size: 1.5rem;
+      padding: 3rem;
+    }
+
+    &--item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      & span {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+
+    &--content {
+      background: #fff;
+      width: 28rem;
+      height: 32rem;
+    }
+
+    &--item {
+      display: flex;
+    }
+  }
 
   &__left {
     width: 85rem;
@@ -325,15 +467,15 @@ export default {
   &__saveshare {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
 
     & span {
       display: inline-block;
       cursor: pointer;
 
       &:nth-child(1) {
-        width: 2.8rem;
-        height: 2.5rem;
+        width: 1.5rem;
+        height: 1.4rem;
         margin-right: 0.5rem;
       }
 
@@ -371,8 +513,8 @@ export default {
 
     &--tag {
       display: inline-block;
-      padding: 1rem 1.4rem;
-      margin: 0.6rem .7rem .6rem 0;
+      padding: 1rem 2rem;
+      margin: 0.6rem 0.7rem 0.6rem 0;
     }
   }
 }

@@ -1,5 +1,10 @@
 <template>
-  <div class="header">
+  <div
+    class="header"
+    v-bind:class="{
+      white: background === 'white',
+    }"
+  >
     <div class="header__logo">
       <Logo />
     </div>
@@ -32,6 +37,15 @@ export default {
     Logo,
     SearchIcon,
   },
+  computed: {
+    background() {
+      const routes = ["login"];
+      const background = routes.filter((item) =>
+        this.$route.name.includes(item)
+      );
+      return background.length ? "white" : "";
+    },
+  },
 };
 </script>
 
@@ -48,6 +62,10 @@ export default {
   background: $color-background;
   z-index: 4;
   transition: all 0.3s ease;
+
+  &.white {
+    background: #fff;
+  }
 
   &__search {
     background: $color-primary-fade;
