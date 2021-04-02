@@ -6,8 +6,7 @@
       v-on:changedYear="changedYear"
       :sundayStart="true"
       :date-format="'dd/mm/yyyy'"
-      :is-date-range="true"
-      :is-date-picker="true"
+      :is-multiple-date-picker='true'
     ></FunctionalCalendar>
   </div>
 </template>

@@ -21,7 +21,10 @@
         </span>
         <span>Filter</span>
       </div>
-      <div class="search__top--item btn-faded btn-double">
+      <div
+        class="search__top--item btn-faded btn-double"
+        @click.stop="toggleCal"
+      >
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -320,6 +323,28 @@
       </div>
     </div>
 
+    <div
+      class="search__calender"
+      @click.stop="toggleCal"
+      v-bind:class="{
+        showCalendar,
+      }"
+    >
+      <div class="search__calendercontent" @click.stop="showCalendar = true">
+        <div class="search__calendertop">
+          <h2>When is the planned data</h2>
+          <span @click.stop="toggleCal">X</span>
+        </div>
+        <div class="search__calenderbody">
+          <Calendar />
+        </div>
+        <div class="search__calenderbottom">
+          <span>Clear</span>
+          <span>Search</span>
+        </div>
+      </div>
+    </div>
+
     <div class="search__loadmore">
       <span><p>Loading more...</p></span
       ><span>
@@ -331,21 +356,29 @@
 
 <script>
 import LocationCard from "@/components/LocationCard";
+import Calendar from "@/components/Calendar";
 
 export default {
   name: "Search",
   data() {
     return {
       showFilter: false,
+      showCalendar: false,
     };
   },
   methods: {
     toggleshowFilter() {
       this.showFilter ? (this.showFilter = false) : (this.showFilter = true);
     },
+    toggleCal() {
+      this.showCalendar
+        ? (this.showCalendar = false)
+        : (this.showCalendar = true);
+    },
   },
   components: {
     LocationCard,
+    Calendar,
   },
   computed: {
     filterDropdown() {
@@ -362,11 +395,11 @@ export default {
     padding: 3rem 0;
 
     &--item {
-      padding: 1rem 3rem;
+      padding: 0.8rem 3rem;
       margin-right: 4rem;
       display: flex;
       align-items: center;
-      width: 12rem;
+      width: 14rem;
       justify-content: center;
       border-radius: 3rem;
       font-size: 1.8rem;
@@ -418,7 +451,7 @@ export default {
 
     &.showFilter {
       display: flex;
-      z-index: 10;
+      z-index: 201;
       opacity: 1;
     }
   }
@@ -429,6 +462,7 @@ export default {
     width: 60vw;
     border-radius: 1.2rem;
     padding: 4rem;
+    margin-top: 6rem;
 
     & h2 {
       font-size: 2rem;
@@ -487,6 +521,94 @@ export default {
         width: 16rem;
         font-size: 1.45rem;
         font-weight: 300;
+      }
+    }
+  }
+
+  &__calender {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+
+    &.showCalendar {
+      display: flex;
+      z-index: 201;
+      opacity: 1;
+    }
+  }
+
+  &__calendercontent {
+    background: #fff;
+    width: 36vw;
+    height: 52rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+
+    & h2 {
+      font-weight: 400;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__calenderbody {
+    font-size: 1.65rem;
+    width: 43rem;
+  }
+
+  &__calendertop {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 7rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+
+    & span {
+      position: absolute;
+      right: 3rem;
+      top: 0;
+      height: 100%;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__calenderbottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+
+    & span {
+      display: inline-block;
+      font-size: 1.7rem;
+      cursor: pointer;
+
+      &:nth-child(1) {
+        text-decoration: underline;
+        color: $color-primary;
+      }
+
+      &:nth-child(2) {
+        background: $color-primary;
+        color: #fff;
+        border-radius: 3rem;
+        padding: 1rem 4rem;
       }
     }
   }

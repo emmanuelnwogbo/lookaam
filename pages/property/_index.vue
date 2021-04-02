@@ -551,7 +551,6 @@ export default {
     margin-top: 3rem;
     font-size: 1.7rem;
     width: 41rem;
-    /* line-height: 2rem; */
     box-shadow: none !important;
   }
 }
