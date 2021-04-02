@@ -1,200 +1,218 @@
 <template>
   <div class="property primary-padding">
-    <div
-      class="property__share"
-      v-bind:class="{
-        showShare,
-      }"
-      @click.stop="toggleshowShare"
-    >
-      <div class="property__share--content" @click.stop="showShare = true">
-        <div class="property__share--top">
-          <h2 class="property__share--h2">Share</h2>
-          <span @click.stop="toggleshowShare">X</span>
-        </div>
-        <div class="property__share--items">
-          <div class="property__share--item">
-            <span>
-              <img src="~/assets/svg/facebookshare.svg" alt="" />
-            </span>
-            <span>
-              <p>Facebook</p>
-            </span>
+    <div class="property__top">
+      <div
+        class="property__share"
+        v-bind:class="{
+          showShare,
+        }"
+        @click.stop="toggleshowShare"
+      >
+        <div class="property__share--content" @click.stop="showShare = true">
+          <div class="property__share--top">
+            <h2 class="property__share--h2">Share</h2>
+            <span @click.stop="toggleshowShare">X</span>
           </div>
-          <div class="property__share--item">
-            <span>
-              <img src="~/assets/svg/twittershare.svg" alt="" />
-            </span>
-            <span>
-              <p>Twitter</p>
-            </span>
+          <div class="property__share--items">
+            <div class="property__share--item">
+              <span>
+                <img src="~/assets/svg/facebookshare.svg" alt="" />
+              </span>
+              <span>
+                <p>Facebook</p>
+              </span>
+            </div>
+            <div class="property__share--item">
+              <span>
+                <img src="~/assets/svg/twittershare.svg" alt="" />
+              </span>
+              <span>
+                <p>Twitter</p>
+              </span>
+            </div>
+            <div class="property__share--item">
+              <span>
+                <img src="~/assets/svg/whatsappshare.svg" alt="" />
+              </span>
+              <span>
+                <p>Whatsapp</p>
+              </span>
+            </div>
+            <div class="property__share--item">
+              <span>
+                <img src="~/assets/svg/copylink.svg" alt="" />
+              </span>
+              <span>
+                <p>Copy link</p>
+              </span>
+            </div>
+            <div class="property__share--item">
+              <span>
+                <img src="~/assets/svg/emailicon.svg" alt="" />
+              </span>
+              <span>
+                <p>Email</p>
+              </span>
+            </div>
           </div>
-          <div class="property__share--item">
-            <span>
-              <img src="~/assets/svg/whatsappshare.svg" alt="" />
-            </span>
-            <span>
-              <p>Whatsapp</p>
-            </span>
-          </div>
-          <div class="property__share--item">
-            <span>
-              <img src="~/assets/svg/copylink.svg" alt="" />
-            </span>
-            <span>
-              <p>Copy link</p>
-            </span>
-          </div>
-          <div class="property__share--item">
-            <span>
-              <img src="~/assets/svg/emailicon.svg" alt="" />
-            </span>
-            <span>
-              <p>Email</p>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="property__side property__left">
-      <div class="property__gallery">
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
-            alt=""
-          />
-        </figure>
-        <div class="property__gallery--details">
-          <span><p>1 of 12</p></span>
-          <span><p>#2,000,000/day</p></span>
         </div>
       </div>
-      <h1 class="property__h1">The Royal Hisbiscus</h1>
-      <div class="property__desc1">
-        <span><p>Restaurant</p></span>
-        <span><p>23,000sq ft</p></span>
-        <span><p>20,000 guests</p></span>
-        <span><p>10 rooms</p></span>
-        <span><p>2 toilets</p></span>
-      </div>
-      <div class="property__host">
-        <div class="property__host--left">
+      <div class="property__side property__left">
+        <div class="property__gallery">
           <figure>
-            <img src="~/assets/imgs/profile_photo.png" alt="" />
+            <img
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+              alt=""
+            />
           </figure>
-          <span><p>by Jane Doe</p></span>
-          <span><img src="~/assets/svg/verified.svg" alt="" /></span>
+          <div class="property__gallery--details">
+            <span><p>1 of 12</p></span>
+            <span><p>#2,000,000/day</p></span>
+          </div>
         </div>
-        <div class="property__host--right" @click="open_hostpage">
-          <span><p>Contact Host</p></span>
+        <h1 class="property__h1">The Royal Hisbiscus</h1>
+        <div class="property__desc1">
+          <span><p>Restaurant</p></span>
+          <span><p>23,000sq ft</p></span>
+          <span><p>20,000 guests</p></span>
+          <span><p>10 rooms</p></span>
+          <span><p>2 toilets</p></span>
+        </div>
+        <div class="property__host">
+          <div class="property__host--left">
+            <figure>
+              <img src="~/assets/imgs/profile_photo.png" alt="" />
+            </figure>
+            <span><p>by Jane Doe</p></span>
+            <span><img src="~/assets/svg/verified.svg" alt="" /></span>
+          </div>
+          <div class="property__host--right" @click="open_hostpage">
+            <span><p>Contact Host</p></span>
+          </div>
+        </div>
+
+        <div class="property__description">
+          <h2 class="property__h2">Description</h2>
+          <p>
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
+            vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a
+            pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
+            neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+            Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit
+            amet,
+          </p>
+
+          <p>
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
+            vel.
+          </p>
+        </div>
+
+        <div class="property__rules">
+          <h2 class="property__h2">Rules</h2>
+          <span>No smoking</span>
+          <span>No parties or events</span>
+          <span>No pets</span>
+          <span>No smoking</span>
+          <span>No parties or events</span>
+          <span>No smoking</span>
+          <span>No parties or events</span>
+          <span>No pets</span>
+          <span>No smoking</span>
+          <span>No parties or events</span>
+          <span>No smoking</span>
+          <span>No parties or events</span>
+          <span>No pets</span>
+          <span>No smoking</span>
+          <span>No parties or events</span>
         </div>
       </div>
+      <div class="property__side property__right">
+        <div class="property__saveshare">
+          <div class="property__saveshare--area">
+            <span>
+              <img src="~/assets/svg/heart.svg" alt="" />
+            </span>
+            <span>
+              <p>save</p>
+            </span>
+          </div>
+          <div class="property__saveshare--area" @click.stop="toggleshowShare">
+            <span></span>
+            <span>
+              <p>share</p>
+            </span>
+          </div>
+        </div>
+        <div class="property__location">
+          <h2 class="property__h2">Location</h2>
 
-      <div class="property__description">
-        <h2 class="property__h2">Description</h2>
-        <p>
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel,
-          ullamcorper sit amet ligula. Praesent sapien massa, convallis a
-          pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in
-          faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-          neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras
-          ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet,
-        </p>
-
-        <p>
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel.
-        </p>
-      </div>
-
-      <div class="property__rules">
-        <h2 class="property__h2">Rules</h2>
-        <span>No smoking</span>
-        <span>No parties or events</span>
-        <span>No pets</span>
-        <span>No smoking</span>
-        <span>No parties or events</span>
-        <span>No smoking</span>
-        <span>No parties or events</span>
-        <span>No pets</span>
-        <span>No smoking</span>
-        <span>No parties or events</span>
-        <span>No smoking</span>
-        <span>No parties or events</span>
-        <span>No pets</span>
-        <span>No smoking</span>
-        <span>No parties or events</span>
+          <span
+            ><p>
+              Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur
+              aliquet quam id dui posuere blandit. Donec sollicitudin molestie
+              malesuada. Curabitur arcu erat, accumsan id imperdiet et,
+              porttitor at sem.
+            </p>
+          </span>
+        </div>
+        <div class="property__idealfor">
+          <h2 class="property__h2">Ideal for</h2>
+          <div class="property__tags">
+            <span
+              v-for="(item, index) in idealFor"
+              :key="index"
+              class="property__tags--tag btn-faded"
+              >{{ item }}</span
+            >
+          </div>
+        </div>
+        <div class="property__amenities">
+          <h2 class="property__h2">Amenities</h2>
+          <div class="property__tags">
+            <span
+              v-for="(item, index) in amenities"
+              :key="index"
+              class="property__tags--tag btn-faded"
+              >{{ item }}</span
+            >
+          </div>
+        </div>
+        <div class="property__availability">
+          <h2 class="property__h2">Availability</h2>
+          <span>Opening time - 8:00</span>
+          <span>Closing time - 20:00</span>
+        </div>
+        <div class="property__calander"></div>
       </div>
     </div>
-    <div class="property__side property__right">
-      <div class="property__saveshare">
-        <div class="property__saveshare--area">
-          <span>
-            <img src="~/assets/svg/heart.svg" alt="" />
-          </span>
-          <span>
-            <p>save</p>
-          </span>
-        </div>
-        <div class="property__saveshare--area" @click.stop="toggleshowShare">
-          <span></span>
-          <span>
-            <p>share</p>
-          </span>
-        </div>
-      </div>
-      <div class="property__location">
-        <h2 class="property__h2">Location</h2>
 
-        <span
-          ><p>
-            Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur
-            aliquet quam id dui posuere blandit. Donec sollicitudin molestie
-            malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor
-            at sem.
-          </p>
-        </span>
-      </div>
-      <div class="property__idealfor">
-        <h2 class="property__h2">Ideal for</h2>
-        <div class="property__tags">
-          <span
-            v-for="(item, index) in idealFor"
-            :key="index"
-            class="property__tags--tag btn-faded"
-            >{{ item }}</span
-          >
-        </div>
-      </div>
-      <div class="property__amenities">
-        <h2 class="property__h2">Amenities</h2>
-        <div class="property__tags">
-          <span
-            v-for="(item, index) in amenities"
-            :key="index"
-            class="property__tags--tag btn-faded"
-            >{{ item }}</span
-          >
-        </div>
-      </div>
-      <div class="property__availability">
-        <h2 class="property__h2">Availability</h2>
-        <span>Opening time - 8:00</span>
-        <span>Closing time - 20:00</span>
-      </div>
-      <div class="property__calander"></div>
+    <div class="property__comments">
+      <h2 class="property__h2">comments</h2>
+      <Comment />
+      <Comment />
+      <Calendar />
     </div>
   </div>
 </template>
 
 <script>
+import Comment from "@/components/Comment";
+import Calendar from "@/components/Calendar";
+
 export default {
   name: "Property",
   data() {
     return {
       showShare: false,
     };
+  },
+  components: {
+    Comment,
+    Calendar
   },
   computed: {
     amenities() {
@@ -244,6 +262,13 @@ export default {
 .property {
   display: flex;
   padding-top: 11rem;
+  flex-direction: column;
+
+  padding-bottom: 8rem;
+
+  &__top {
+    display: flex;
+  }
 
   &__share {
     position: fixed;
@@ -270,8 +295,7 @@ export default {
       text-align: center;
       font-size: 1.1rem;
       font-weight: 300;
-
-      border-bottom: .1px solid $color-black;
+      border-bottom: 0.1px solid $color-black;
 
       & span {
         position: absolute;
@@ -380,7 +404,7 @@ export default {
     margin-top: 2rem;
     font-weight: 500;
     font-size: 1.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &__desc1 {
@@ -516,6 +540,11 @@ export default {
       padding: 1rem 2rem;
       margin: 0.6rem 0.7rem 0.6rem 0;
     }
+  }
+
+  &__comments {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

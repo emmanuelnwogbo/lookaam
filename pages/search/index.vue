@@ -360,13 +360,16 @@ export default {
   &__top {
     display: flex;
     padding: 3rem 0;
-    font-size: 2rem;
 
     &--item {
-      padding: 1.3rem 3rem;
+      padding: 1rem 3rem;
       margin-right: 4rem;
       display: flex;
       align-items: center;
+      width: 12rem;
+      justify-content: center;
+      border-radius: 3rem;
+      font-size: 1.8rem;
 
       & span {
         display: inline-block;
@@ -392,6 +395,9 @@ export default {
   }
 
   &__card {
+    height: 27rem;
+    width: 34rem;
+
     &:nth-child(4n) {
       margin-right: 0;
     }

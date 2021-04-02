@@ -9,7 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "vue-functional-calendar": "^2.9.4"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",

@@ -53,6 +53,8 @@ body {
   color: $color-black;
   font-family: "Roboto", sans-serif;
 
+  overflow-x: hidden;
+
   @include respond(tab-port) {
     padding: 0;
   }

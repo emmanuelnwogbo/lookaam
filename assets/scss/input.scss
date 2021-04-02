@@ -1,7 +1,7 @@
 .form-input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.2rem;
 
   &-label {
     font-size: 1.5rem;
@@ -12,7 +12,7 @@
   &-area {
     background: $color-primary-fade;
     display: inline-block;
-    height: 4.5rem;
+    height: 5rem;
     border-radius: 3rem;
     width: 45rem;
     margin-top: 0.7rem;

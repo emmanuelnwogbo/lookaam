@@ -2,106 +2,120 @@
   <div class="landing">
     <div class="landing__jumbotron">
       <figure>
-        <img src="https://aws-course-nwogbo.s3.eu-west-2.amazonaws.com/Introduction.jpg" alt="" />
+        <img
+          src="https://aws-course-nwogbo.s3.eu-west-2.amazonaws.com/Introduction.jpg"
+          alt=""
+        />
       </figure>
     </div>
 
     <div class="landing__discover">
       <h3 class="landing__h3">Discover places</h3>
       <div class="landing__cards">
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-          :name="'Redeem church'"
-          :propertyType="'Church'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1046&q=80'"
-          :name="'Redeem church'"
-          :propertyType="'Church'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=906&q=80'"
-          :name="'Mornach hall'"
-          :propertyType="'Hall'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1598228723793-52759bba239c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80'"
-          :name="'Johnny rockets'"
-          :propertyType="'Restaurant'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1046&q=80'"
-          :name="'Redeem church'"
-          :propertyType="'Church'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=906&q=80'"
-          :name="'Mornach hall'"
-          :propertyType="'Hall'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1598228723793-52759bba239c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80'"
-          :name="'Johnny rockets'"
-          :propertyType="'Restaurant'"
-          :cost="'#10,000/day'"
-        /><LocationCard
-          :image="'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1046&q=80'"
-          :name="'Redeem church'"
-          :propertyType="'Church'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=906&q=80'"
-          :name="'Mornach hall'"
-          :propertyType="'Hall'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1598228723793-52759bba239c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80'"
-          :name="'Johnny rockets'"
-          :propertyType="'Restaurant'"
-          :cost="'#10,000/day'"
-        /><LocationCard
-          :image="'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1046&q=80'"
-          :name="'Redeem church'"
-          :propertyType="'Church'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=906&q=80'"
-          :name="'Mornach hall'"
-          :propertyType="'Hall'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1598228723793-52759bba239c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80'"
-          :name="'Johnny rockets'"
-          :propertyType="'Restaurant'"
-          :cost="'#10,000/day'"
-        /><LocationCard
-          :image="'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1046&q=80'"
-          :name="'Redeem church'"
-          :propertyType="'Church'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=906&q=80'"
-          :name="'Mornach hall'"
-          :propertyType="'Hall'"
-          :cost="'#10,000/day'"
-        />
-        <LocationCard
-          :image="'https://images.unsplash.com/photo-1598228723793-52759bba239c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80'"
-          :name="'Johnny rockets'"
-          :propertyType="'Restaurant'"
-          :cost="'#10,000/day'"
-        />
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
+        <div class="landing__card">
+          <LocationCard
+            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+            :name="'Redeem church'"
+            :propertyType="'Church'"
+            :cost="'#10,000/day'"
+          />
+        </div>
       </div>
       <div class="landing__seemore landing-padding">
         <span>See more places</span>
@@ -192,22 +206,22 @@ export default {
 <style lang="scss" scoped>
 .landing {
   &__jumbotron {
-    height: 48rem;
+    height: 51rem;
     margin-top: 8rem;
 
     & figure {
-      height: 48rem;
+      height: 51rem;
     }
   }
 
   &__discover {
-    padding: 1.8rem 0 2rem 5rem;
+    padding: 1.8rem 0 0.6rem 5rem;
   }
 
   &__h3 {
     font-weight: 700;
     margin: 3rem 0 4rem 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   &__cards {
@@ -217,6 +231,17 @@ export default {
 
     & .locationcard {
       margin-right: 2.6rem;
+    }
+  }
+
+  &__card {
+    height: 25rem;
+    width: 29rem;
+    flex-shrink: 0;
+    margin-right: 1.1rem;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -233,7 +258,7 @@ export default {
 
   &__blue {
     background: $color-primary;
-    height: 40rem;
+    height: 47rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

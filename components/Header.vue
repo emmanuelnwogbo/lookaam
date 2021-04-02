@@ -25,7 +25,7 @@
       </span>
     </div>
   </div>
-</template>
+</template> 
 
 <script>
 import Logo from "@/components/Logo";
@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     background() {
-      const routes = ["login"];
+      const routes = ["login", "signup"];
       const background = routes.filter((item) =>
         this.$route.name.includes(item)
       );
