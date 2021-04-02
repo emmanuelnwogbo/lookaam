@@ -186,7 +186,9 @@
           <span>Opening time - 8:00</span>
           <span>Closing time - 20:00</span>
         </div>
-        <div class="property__calander"></div>
+        <div class="property__calender">
+          <Calendar />
+        </div>
       </div>
     </div>
 
@@ -194,7 +196,6 @@
       <h2 class="property__h2">comments</h2>
       <Comment />
       <Comment />
-      <Calendar />
     </div>
   </div>
 </template>
@@ -212,7 +213,7 @@ export default {
   },
   components: {
     Comment,
-    Calendar
+    Calendar,
   },
   computed: {
     amenities() {
@@ -263,7 +264,6 @@ export default {
   display: flex;
   padding-top: 11rem;
   flex-direction: column;
-
   padding-bottom: 8rem;
 
   &__top {
@@ -285,7 +285,7 @@ export default {
 
     &.showShare {
       display: flex;
-      z-index: 10;
+      z-index: 201;
       opacity: 1;
     }
 
@@ -545,6 +545,14 @@ export default {
   &__comments {
     display: flex;
     flex-direction: column;
+  }
+
+  &__calender {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    width: 41rem;
+    /* line-height: 2rem; */
+    box-shadow: none !important;
   }
 }
 </style>

@@ -60,8 +60,8 @@ export default {
   left: 0;
   width: 100vw;
   background: $color-background;
-  z-index: 4;
   transition: all 0.3s ease;
+  z-index: 200;
 
   &.white {
     background: #fff;
