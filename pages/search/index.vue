@@ -399,10 +399,10 @@ export default {
       margin-right: 4rem;
       display: flex;
       align-items: center;
-      width: 14rem;
+      width: 12rem;
       justify-content: center;
       border-radius: 3rem;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
 
       & span {
         display: inline-block;
