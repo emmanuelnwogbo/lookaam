@@ -134,7 +134,9 @@
         </div>
       </div>
       <div class="landing__blue--right">
-        <span></span>
+        <span>
+          <img src="~/assets/svg/undraw_homepage.svg" alt="" />
+        </span>
       </div>
     </div>
 
@@ -266,6 +268,11 @@ export default {
     &--left {
       font-size: 4.5rem;
       color: #fff;
+    }
+
+    &--right {
+      height: 37rem;
+      width: 61rem;
     }
 
     &--copy {
