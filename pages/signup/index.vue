@@ -1,6 +1,6 @@
 <template>
   <div class="signup form-container">
-    <div class="form">
+    <div class="form" v-if="!success">
       <h1 class="form-h1">Create Your Account</h1>
       <div class="form-input">
         <span class="form-input-label">
@@ -68,6 +68,27 @@
       </div>
     </div>
 
+    <div class="form form-success" v-if="success">
+      <div class="form-success-top">
+        <figure class="form-success-img">
+          <img src="~/assets/svg/email-icon-colored.svg" alt="" />
+        </figure>
+        <h1 class="form-success-h1">Check your Mail</h1>
+        <div class="form-success-para">
+          <p>
+            We have sent a verification email with an instruction to verify your
+            email
+          </p>
+        </div>
+      </div>
+
+      <div class="form-success-bottom">
+        <div class="form-success-para">
+          <p>Did not receive your email? Check your spam filter</p>
+        </div>
+      </div>
+    </div>
+
     <div class="form-right">
       <div class="form-art">
         <img src="~/assets/svg/undraw_well_done_i2wr.svg" alt="" />
@@ -84,11 +105,21 @@ import form_mixin from "@/mixins/form";
 
 export default {
   name: "Signup",
+  data() {
+    return {
+      success: true,
+    };
+  },
   mixins: [form_mixin],
 };
 </script>
 
 <style lang="scss">
 .signup {
+}
+
+.form-success {
+  padding-top: 7rem;
+  height: 50rem;
 }
 </style>
