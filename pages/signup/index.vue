@@ -107,7 +107,7 @@ export default {
   name: "Signup",
   data() {
     return {
-      success: true,
+      success: false,
     };
   },
   mixins: [form_mixin],
