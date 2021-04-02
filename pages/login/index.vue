@@ -41,7 +41,13 @@
       </div>
     </div>
 
-    <div class="form-art">
+    <div class="form-right">
+      <div class="form-art">
+        <img src="~/assets/svg/undraw_well_done_i2wr.svg" alt="" />
+      </div>
+      <div class="form-bottomhead">
+        <h1 class="form-h1">Welcome back</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -57,6 +63,5 @@ export default {
 
 <style lang="scss">
 .login {
-  
 }
 </style>

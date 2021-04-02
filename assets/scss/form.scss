@@ -5,7 +5,7 @@
 
   &-container {
     padding: 0 13rem;
-    padding-top: 13rem;
+    padding-top: 11rem;
     background: #fff;
     min-height: 100vh;
     width: 100vw;
@@ -35,17 +35,34 @@
   }
 
   &-haveaccountimg {
-      transform: translateX(3rem) translateY(0.3rem);
-    }
+    transform: translateX(3rem) translateY(0.3rem);
+  }
+
+  &-right {
+    transform: translateY(-4rem);
+  }
 
   &-art {
+    height: 58rem;
+    width: 65rem;
   }
 
   &-h1 {
     color: $color-black;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 500;
     margin-bottom: 4rem;
+  }
+
+  &-bottomhead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+
+    & h1 {
+      text-align: center;
+    }
   }
 
   &-or {

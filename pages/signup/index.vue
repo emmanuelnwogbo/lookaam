@@ -59,16 +59,23 @@
         </span>
         <div class="form-havaccount">
           <span class="form-btn form-btn-borderless">
-          <span class="form-or form-haveaccountimg">
-            <img src="~/assets/svg/alreadyhaveanaccount.svg" alt="">
-          </span>
+            <span class="form-or form-haveaccountimg">
+              <img src="~/assets/svg/alreadyhaveanaccount.svg" alt="" />
+            </span>
             <button>Sign in instead</button>
           </span>
         </div>
       </div>
     </div>
 
-    <div class="form-art"></div>
+    <div class="form-right">
+      <div class="form-art">
+        <img src="~/assets/svg/undraw_well_done_i2wr.svg" alt="" />
+      </div>
+      <div class="form-bottomhead">
+        <h1 class="form-h1">Sign up for free and see places</h1>
+      </div>
+    </div>
   </div>
 </template>
 
