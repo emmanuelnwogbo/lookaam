@@ -1,6 +1,11 @@
 <template>
   <div class="landing">
-    <div class="landing__jumbotron">
+    <div
+      class="landing__jumbotron"
+      v-bind:class="{
+        mobileWidth,
+      }"
+    >
       <figure>
         <img
           src="https://aws-course-nwogbo.s3.eu-west-2.amazonaws.com/Introduction.jpg"
@@ -10,9 +15,21 @@
     </div>
 
     <div class="landing__discover">
-      <h3 class="landing__h3">Discover places</h3>
+      <h3
+        class="landing__h3"
+        v-bind:class="{
+          mobileWidth,
+        }"
+      >
+        Discover places
+      </h3>
       <div class="landing__cards">
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -20,7 +37,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -28,7 +50,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -36,7 +63,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -44,7 +76,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -52,7 +89,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -60,7 +102,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -68,7 +115,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -76,7 +128,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -84,7 +141,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -92,23 +154,12 @@
             :cost="'#10,000/day'"
           />
         </div>
-        <div class="landing__card">
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div class="landing__card">
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div class="landing__card">
+        <div
+          class="landing__card"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
@@ -117,30 +168,71 @@
           />
         </div>
       </div>
-      <div class="landing__seemore landing-padding">
+      <div
+        class="landing__seemore landing-padding"
+        v-bind:class="{
+          mobileWidth,
+        }"
+      >
         <span>See more places</span>
         <span>></span>
       </div>
     </div>
 
-    <div class="landing__blue landing-padding">
+    <div
+      class="landing__blue landing-padding"
+      v-bind:class="{
+        mobileWidth,
+      }"
+    >
       <div class="landing__blue--left">
-        <div class="landing__blue--copy">
+        <div class="landing__blue--copy" v-if="!mobileWidth">
           <span><p>Join hundreds of hosts</p></span>
           <span><p>on lookam</p></span>
         </div>
-        <div class="landing__blue--action">
-          <button class="btn btn-landing">Host your place</button>
+        <div class="landing__blue--copymobile" v-if="mobileWidth">
+          <span>
+            <p>Join</p>
+          </span>
+          <span>
+            <p>hundreds of</p>
+          </span>
+          <span>
+            <p>hosts on</p>
+          </span>
+          <span>
+            <p>lookaam</p>
+          </span>
+        </div>
+        <div
+          class="landing__blue--action"
+          v-bind:class="{
+            mobileWidth,
+          }"
+        >
+          <button
+            class="btn btn-landing"
+            v-bind:class="{
+              mobileWidth,
+            }"
+          >
+            Host your place
+          </button>
         </div>
       </div>
-      <div class="landing__blue--right">
+      <div
+        class="landing__blue--right"
+        v-bind:class="{
+          mobileWidth,
+        }"
+      >
         <span>
           <img src="~/assets/svg/undraw_homepage.svg" alt="" />
         </span>
       </div>
     </div>
 
-    <footer class="landing__footer landing-padding">
+    <footer class="landing__footer landing-padding" v-if="!mobileWidth">
       <div class="landing__footer--left">
         <span>About lookaam</span>
         <span class="hostplace">Host your place</span>
@@ -192,16 +284,41 @@
         </span>
       </div>
     </footer>
+
+    <footer class="footer__mobile" v-if="mobileWidth">
+      <div class="footer__mobile--item"><p>About lookaam</p></div>
+      <div class="footer__mobile--item"><p>Host your place</p></div>
+      <div class="footer__mobile--item"><p>Contact Us</p></div>
+      <div class="footer__mobile--item footer__mobile--itembottom">
+        <div class="footer__mobile--left">&copy; 2021 lookaam</div>
+        <div class="footer__mobile--right">
+          <span>
+            <img src="~/assets/svg/instagram.svg" alt="" />
+          </span>
+          <span>
+            <img src="~/assets/svg/facebook.svg" alt="" />
+          </span>
+          <span>
+            <img src="~/assets/svg/twitter.svg" alt="" />
+          </span>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
 import LocationCard from "@/components/LocationCard";
+import mobilecheck from "@/mixins/mobilecheck";
 
 export default {
+  data() {
+    return {};
+  },
   components: {
     LocationCard,
   },
+  mixins: [mobilecheck],
 };
 </script>
 
@@ -212,7 +329,12 @@ export default {
     margin-top: 8rem;
 
     & figure {
-      height: 51rem;
+      height: 100%;
+    }
+
+    &.mobileWidth {
+      margin-top: 42rem;
+      height: 150rem;
     }
   }
 
@@ -224,6 +346,12 @@ export default {
     font-weight: 700;
     margin: 3rem 0 4rem 0;
     font-size: 2.5rem;
+
+    &.mobileWidth {
+      font-weight: 700;
+      margin: 6rem 0 7rem 0;
+      font-size: 8.5rem;
+    }
   }
 
   &__cards {
@@ -231,7 +359,7 @@ export default {
     align-items: center;
     overflow: hidden;
 
-    & .locationcard {
+    &.locationcard {
       margin-right: 2.6rem;
     }
   }
@@ -242,6 +370,15 @@ export default {
     flex-shrink: 0;
     margin-right: 1.1rem;
 
+    &.mobileWidth {
+      height: 96rem;
+      width: 103rem;
+      flex-shrink: 0;
+      margin-right: 6.1rem;
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -249,12 +386,18 @@ export default {
 
   &__seemore {
     text-align: right;
+    font-size: 1.5rem;
 
     & span {
+      display: inline-block;
       font-weight: 300;
       color: $color-primary;
-      font-size: 1.5rem;
       cursor: pointer;
+    }
+
+    &.mobileWidth {
+      font-size: 6rem;
+      padding: 7rem 0 5rem 0;
     }
   }
 
@@ -265,6 +408,10 @@ export default {
     justify-content: space-between;
     align-items: center;
 
+    &.mobileWidth {
+      height: 150rem;
+    }
+
     &--left {
       font-size: 4.5rem;
       color: #fff;
@@ -273,18 +420,40 @@ export default {
     &--right {
       height: 37rem;
       width: 61rem;
+
+      &.mobileWidth {
+        height: 40rem;
+        width: 66rem;
+      }
     }
 
     &--copy {
       margin: 0 0 3rem 0;
     }
 
+    &--copymobile {
+      margin: 0 0 3rem 0;
+      display: flex;
+      flex-direction: column;
+      font-size: 14rem;
+    }
+
     &--action {
+      &.mobileWidth {
+        margin-top: 17rem;
+      }
+
       & button {
         color: $color-primary;
         padding: 1.5rem 2.5rem;
         border-radius: 3rem;
         font-size: 1.7rem;
+
+        &.mobileWidth {
+          padding: 4.5rem 9.5rem;
+          border-radius: 10rem;
+          font-size: 6rem;
+        }
       }
     }
   }
@@ -323,6 +492,39 @@ export default {
       justify-content: space-between;
       width: 24rem;
       font-size: 1.4rem;
+    }
+  }
+}
+
+.footer {
+  &__mobile {
+    display: flex;
+    font-weight: 300;
+    flex-direction: column;
+    font-size: 6rem;
+    padding: 14rem 6rem;
+    line-height: 15rem;
+
+    &--item {
+      color: $color-primary;
+    }
+
+    &--itembottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $color-black;
+      font-weight: 700;
+      margin-top: 4rem;
+    }
+
+    &--right {
+      & span {
+        display: inline-block;
+        margin-left: 3rem;
+        height: 8rem;
+        width: 8rem;
+      }
     }
   }
 }

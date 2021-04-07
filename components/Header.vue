@@ -1,28 +1,50 @@
 <template>
-  <div
-    class="header"
-    v-bind:class="{
-      white: background === 'white',
-    }"
-  >
-    <div class="header__logo">
-      <Logo />
+  <div>
+    <div class="header" v-if="!mobileWidth">
+      <div class="header__logo">
+        <Logo />
+      </div>
+      <div class="header__search">
+        <span>
+          <SearchIcon />
+        </span>
+        <span>
+          <input type="text" placeholder="Search for a location" />
+        </span>
+      </div>
+      <div class="header__btns">
+        <span>
+          <button class="btn btn-transparent">Become a Host</button>
+        </span>
+        <span>
+          <button class="btn btn-colored btn-landing">Login</button>
+        </span>
+      </div>
     </div>
-    <div class="header__search">
-      <span>
-        <SearchIcon />
-      </span>
-      <span>
-        <input type="text" placeholder="Search for a location" />
-      </span>
-    </div>
-    <div class="header__btns">
-      <span>
-        <button class="btn btn-transparent">Become a Host</button>
-      </span>
-      <span>
-        <button class="btn btn-colored btn-landing">Login</button>
-      </span>
+
+    <div class="header mobile" v-if="mobileWidth">
+      <div class="header__mobiletop header__mobilearea">
+        <figure>
+          <img src="~/assets/svg/logo.svg" alt="" />
+        </figure>
+        <figure>
+          <img src="~/assets/svg/menuburger.svg" alt="" />
+        </figure>
+      </div>
+      <div class="header__mobilebottom header__mobilearea">
+        <div class="header__search mobile">
+          <span>
+            <SearchIcon />
+          </span>
+          <span>
+            <input
+              class="mobile"
+              type="text"
+              placeholder="Search for a location"
+            />
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </template> 
@@ -30,22 +52,19 @@
 <script>
 import Logo from "@/components/Logo";
 import SearchIcon from "@/components/SearchIcon";
+import mobilecheck from "@/mixins/mobilecheck";
 
 export default {
   name: "Header",
+  data() {
+    return {};
+  },
   components: {
     Logo,
     SearchIcon,
   },
-  computed: {
-    background() {
-      const routes = ["login", "signup"];
-      const background = routes.filter((item) =>
-        this.$route.name.includes(item)
-      );
-      return background.length ? "white" : "";
-    },
-  },
+  computed: {},
+  mixins: [mobilecheck],
 };
 </script>
 
@@ -59,12 +78,36 @@ export default {
   top: 0;
   left: 0;
   width: 100vw;
-  background: $color-background;
+  background: #fff;
   transition: all 0.3s ease;
   z-index: 200;
 
-  &.white {
-    background: #fff;
+  &__mobilearea {
+    width: 100%;
+
+    & figure {
+      &:nth-child(1) {
+        width: 34rem;
+        height: 6rem;
+      }
+
+      &:nth-child(2) {
+        width: 10rem;
+        height: 7rem;
+      }
+    }
+  }
+
+  &__mobiletop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.mobile {
+    flex-direction: column;
+    height: 42rem;
+    padding: 6rem 7rem;
   }
 
   &__search {
@@ -74,6 +117,12 @@ export default {
     align-items: center;
     padding: 0 2rem;
 
+    &.mobile {
+      padding: 1rem 4rem;
+      height: 16rem;
+      border-radius: 13rem;
+    }
+
     & input {
       border: none;
       outline: none;
@@ -81,6 +130,10 @@ export default {
       background: transparent;
       width: 82rem;
       font-size: 1.5rem;
+
+      &.mobile {
+        font-size: 4.8rem;
+      }
 
       &::placeholder {
         color: $color-black;
