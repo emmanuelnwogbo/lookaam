@@ -435,7 +435,7 @@ export default {
       margin: 0 0 3rem 0;
       display: flex;
       flex-direction: column;
-      font-size: 14rem;
+      font-size: 12.5rem;
     }
 
     &--action {
