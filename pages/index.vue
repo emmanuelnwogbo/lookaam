@@ -333,7 +333,7 @@ export default {
     }
 
     &.mobileWidth {
-      margin-top: 42rem;
+      margin-top: 48rem;
       height: 150rem;
     }
   }

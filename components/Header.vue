@@ -87,13 +87,13 @@ export default {
 
     & figure {
       &:nth-child(1) {
-        width: 34rem;
-        height: 6rem;
+        width: 43rem;
+        height: 7rem;
       }
 
       &:nth-child(2) {
-        width: 10rem;
-        height: 7rem;
+        width: 14rem;
+        height: 12rem;
       }
     }
   }
@@ -106,7 +106,7 @@ export default {
 
   &.mobile {
     flex-direction: column;
-    height: 42rem;
+    height: 48rem;
     padding: 6rem 7rem;
   }
 
@@ -119,7 +119,7 @@ export default {
 
     &.mobile {
       padding: 1rem 4rem;
-      height: 16rem;
+      height: 18rem;
       border-radius: 13rem;
     }
 
@@ -132,7 +132,7 @@ export default {
       font-size: 1.5rem;
 
       &.mobile {
-        font-size: 4.8rem;
+        font-size: 5rem;
       }
 
       &::placeholder {

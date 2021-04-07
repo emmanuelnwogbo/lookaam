@@ -32,8 +32,8 @@ export default {
   backface-visibility: hidden;
 
   &.mobile {
-    height: 6.5rem;
-    width: 6.5rem;
+    height: 7rem;
+    width: 7rem;
   }
 
   &::after {
