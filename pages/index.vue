@@ -324,6 +324,8 @@ export default {
 
 <style lang="scss" scoped>
 .landing {
+  background: #fff;
+
   &__jumbotron {
     height: 51rem;
     margin-top: 8rem;
@@ -333,7 +335,7 @@ export default {
     }
 
     &.mobileWidth {
-      margin-top: 48rem;
+      margin-top: 51rem;
       height: 150rem;
     }
   }
@@ -349,7 +351,7 @@ export default {
 
     &.mobileWidth {
       font-weight: 700;
-      margin: 6rem 0 7rem 0;
+      margin: 9rem 0 9rem 0;
       font-size: 8.5rem;
     }
   }
@@ -396,8 +398,8 @@ export default {
     }
 
     &.mobileWidth {
-      font-size: 6rem;
-      padding: 7rem 0 5rem 0;
+      font-size: 6.4rem;
+      padding: 11rem 6rem 8rem 0;
     }
   }
 
@@ -521,7 +523,7 @@ export default {
     &--right {
       & span {
         display: inline-block;
-        margin-left: 3rem;
+        margin-left: 6rem;
         height: 8rem;
         width: 8rem;
       }

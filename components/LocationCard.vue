@@ -15,6 +15,7 @@
           v-bind:class="{
             mobileWidth,
           }"
+          class="search__heart"
         >
           <img src="~/assets/svg/heart_white.svg" alt="" />
         </span>
@@ -91,8 +92,8 @@ export default {
         display: inline-block;
 
         &:nth-child(2) {
-          width: 2.5rem;
-          height: 2.4rem;
+          width: 2.2rem;
+          height: 1.9rem;
 
           &.mobileWidth {
             width: 9rem;
@@ -105,6 +106,7 @@ export default {
     &--bottom {
       display: flex;
       flex-direction: column;
+      line-height: 9.8rem;
 
       & span {
         &:nth-child(2) {

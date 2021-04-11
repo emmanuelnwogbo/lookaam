@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "nuxt": "^2.14.0",
+    "slideout": "^1.0.1",
     "vue-functional-calendar": "^2.9.4"
   },
   "devDependencies": {

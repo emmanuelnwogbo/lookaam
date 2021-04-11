@@ -92,8 +92,8 @@ export default {
       }
 
       &:nth-child(2) {
-        width: 14rem;
-        height: 12rem;
+        width: 9rem;
+        height: 10rem;
       }
     }
   }
@@ -106,7 +106,7 @@ export default {
 
   &.mobile {
     flex-direction: column;
-    height: 48rem;
+    height: 51rem;
     padding: 6rem 7rem;
   }
 
