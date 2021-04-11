@@ -14,13 +14,18 @@
         <span
           v-bind:class="{
             mobileWidth,
+            search__heart: mobileWidth
           }"
-          class="search__heart"
         >
           <img src="~/assets/svg/heart_white.svg" alt="" />
         </span>
       </div>
-      <div class="locationcard__text--bottom">
+      <div
+        class="locationcard__text--bottom"
+        v-bind:class="{
+          mobileWidth,
+        }"
+      >
         <span>{{ name }}</span>
         <span>{{ propertyType }}</span>
         <span>{{ cost }}</span>
@@ -93,7 +98,7 @@ export default {
 
         &:nth-child(2) {
           width: 2.2rem;
-          height: 1.9rem;
+          height: 2rem;
 
           &.mobileWidth {
             width: 9rem;
@@ -106,7 +111,11 @@ export default {
     &--bottom {
       display: flex;
       flex-direction: column;
-      line-height: 9.8rem;
+      line-height: 2.4rem;
+
+      &.mobileWidth {
+        line-height: 9.8rem;
+      }
 
       & span {
         &:nth-child(2) {

@@ -355,10 +355,16 @@
     </div>
 
     <div class="search search__mobile" v-if="mobileWidth">
-      <div class="search__mobileoverlay mobile-overlay">
+      <div
+        class="search__mobileoverlay mobile-overlay"
+        v-if="showFilter || showCalendar"
+      >
         <div class="search__mobileoverlaytop">
           <h2>{{ showFilter ? "Filters" : "When is the planned date" }}</h2>
-          <span class="close">
+          <span class="close"  @click.prevent="showFilter = false" v-if="showFilter">
+            <img src="~/assets/svg/close.svg" alt="" />
+          </span>
+          <span class="close"  @click.prevent="showCalendar = false" v-if="!showFilter">
             <img src="~/assets/svg/close.svg" alt="" />
           </span>
         </div>
@@ -370,16 +376,16 @@
           </div>
 
           <div class="search__mobileidealfor">
-            <div>
+            <div class="search__mobileidealfor--item">
               <span>
                 <p>Ideal for</p>
               </span>
             </div>
-            <div>
-              <span>
+            <div class="search__mobileidealfor--item">
+              <span class="closeopentext">
                 <p>close all ideal for</p>
               </span>
-              <span>
+              <span class="closeopen">
                 <img src="~/assets/svg/updown.svg" alt="" />
               </span>
             </div>
@@ -403,11 +409,11 @@
               <span>
                 <input
                   class="styled-checkbox styled-checkbox-mobilesearch"
-                  id="styled-checkbox-1"
+                  id="styled-checkbox-2"
                   type="checkbox"
                   value="value1"
                 />
-                <label for="styled-checkbox-1"></label>
+                <label for="styled-checkbox-2"></label>
               </span>
             </div>
             <div class="search__mobcheckboxes--idealforitem">
@@ -415,11 +421,11 @@
               <span>
                 <input
                   class="styled-checkbox styled-checkbox-mobilesearch"
-                  id="styled-checkbox-1"
+                  id="styled-checkbox-3"
                   type="checkbox"
                   value="value1"
                 />
-                <label for="styled-checkbox-1"></label>
+                <label for="styled-checkbox-3"></label>
               </span>
             </div>
             <div class="search__mobcheckboxes--idealforitem">
@@ -427,11 +433,11 @@
               <span>
                 <input
                   class="styled-checkbox styled-checkbox-mobilesearch"
-                  id="styled-checkbox-1"
+                  id="styled-checkbox-4"
                   type="checkbox"
                   value="value1"
                 />
-                <label for="styled-checkbox-1"></label>
+                <label for="styled-checkbox-4"></label>
               </span>
             </div>
             <div class="search__mobcheckboxes--idealforitem">
@@ -439,18 +445,100 @@
               <span>
                 <input
                   class="styled-checkbox styled-checkbox-mobilesearch"
-                  id="styled-checkbox-1"
+                  id="styled-checkbox-5"
                   type="checkbox"
                   value="value1"
                 />
-                <label for="styled-checkbox-1"></label>
+                <label for="styled-checkbox-5"></label>
+              </span>
+            </div>
+          </div>
+
+          <div class="search__mobileidealfor">
+            <div class="search__mobileidealfor--item">
+              <span>
+                <p>Amenities</p>
+              </span>
+            </div>
+            <div class="search__mobileidealfor--item">
+              <span class="closeopentext">
+                <p>show all amenities</p>
+              </span>
+              <span class="closeopen">
+                <img src="~/assets/svg/updown.svg" alt="" />
+              </span>
+            </div>
+          </div>
+
+          <div class="search__mobcheckboxes">
+            <div class="search__mobcheckboxes--idealforitem">
+              <span>Production</span>
+              <span>
+                <input
+                  class="styled-checkbox styled-checkbox-mobilesearch"
+                  id="styled-checkbox-6"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-6"></label>
+              </span>
+            </div>
+            <div class="search__mobcheckboxes--idealforitem">
+              <span>Reception</span>
+              <span>
+                <input
+                  class="styled-checkbox styled-checkbox-mobilesearch"
+                  id="styled-checkbox-7"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-7"></label>
+              </span>
+            </div>
+            <div class="search__mobcheckboxes--idealforitem">
+              <span>Meeting</span>
+              <span>
+                <input
+                  class="styled-checkbox styled-checkbox-mobilesearch"
+                  id="styled-checkbox-8"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-8"></label>
+              </span>
+            </div>
+            <div class="search__mobcheckboxes--idealforitem">
+              <span>Perfomance</span>
+              <span>
+                <input
+                  class="styled-checkbox styled-checkbox-mobilesearch"
+                  id="styled-checkbox-9"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-9"></label>
+              </span>
+            </div>
+            <div class="search__mobcheckboxes--idealforitem">
+              <span>Dinner</span>
+              <span>
+                <input
+                  class="styled-checkbox styled-checkbox-mobilesearch"
+                  id="styled-checkbox-10"
+                  type="checkbox"
+                  value="value1"
+                />
+                <label for="styled-checkbox-10"></label>
               </span>
             </div>
           </div>
         </div>
+
+        <div class="search__mobilecalender" v-if="showCalendar"></div>
       </div>
+
       <div class="search__mobiletop">
-        <div class="search__mobiletop--item">
+        <div class="search__mobiletop--item" @click.prevent="showFilter = true">
           <span>
             <img src="~/assets/svg/filter.svg" alt="" />
           </span>
@@ -458,7 +546,7 @@
             <p>Filter</p>
           </span>
         </div>
-        <div class="search__mobiletop--item">
+        <div class="search__mobiletop--item" @click.prevent="showCalendar = true">
           <span class="calender">
             <img src="~/assets/svg/calender.svg" alt="" />
           </span>
@@ -540,7 +628,7 @@ export default {
   name: "Search",
   data() {
     return {
-      showFilter: true,
+      showFilter: false,
       showCalendar: false,
     };
   },
@@ -868,7 +956,7 @@ export default {
     justify-content: center;
     align-items: center;
     font-size: 5.6rem;
-    padding: 13rem 7rem;
+    padding: 10rem 7rem;
 
     & h2 {
       font-weight: 400;
@@ -880,9 +968,9 @@ export default {
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 0.2px;
-      background: #000000;
-      opacity: 0.3;
+      height: 0.1px;
+      background: $color-black;
+      opacity: 0.1;
     }
 
     & span {
@@ -900,11 +988,44 @@ export default {
   }
 
   &__mobileoverlaymid {
-    margin-top: 6rem;
-    font-size: 7rem;
+    margin-top: 5rem;
+    font-size: 6.5rem;
+    margin-bottom: 8rem;
+  }
+
+  &__mobileidealfor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9rem;
+
+    &--item {
+      font-size: 6.5rem;
+      display: flex;
+      align-items: center;
+
+      & span {
+        display: block;
+
+        &.closeopentext {
+          text-decoration: underline;
+        }
+
+        &.closeopen {
+          height: 2rem;
+          width: 5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 2rem;
+        }
+      }
+    }
   }
 
   &__mobcheckboxes {
+    margin-bottom: 9rem;
+
     &--idealforitem {
       font-size: 6.5rem;
       display: flex;
@@ -915,6 +1036,9 @@ export default {
       font-weight: 300;
     }
   }
+
+  &__mobilecalender {
+  }
 }
 
 .styled-checkbox-mobilesearch {
@@ -922,6 +1046,13 @@ export default {
     width: 7rem;
     height: 7rem;
     border-radius: 0.7rem;
+  }
+
+  & + label:after {
+    left: 1rem !important;
+    top: 3rem !important;
+    width: 1rem !important;
+    height: 1rem !important;
   }
 }
 </style>
