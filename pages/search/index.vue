@@ -361,10 +361,18 @@
       >
         <div class="search__mobileoverlaytop">
           <h2>{{ showFilter ? "Filters" : "When is the planned date" }}</h2>
-          <span class="close"  @click.prevent="showFilter = false" v-if="showFilter">
+          <span
+            class="close"
+            @click.prevent="showFilter = false"
+            v-if="showFilter"
+          >
             <img src="~/assets/svg/close.svg" alt="" />
           </span>
-          <span class="close"  @click.prevent="showCalendar = false" v-if="!showFilter">
+          <span
+            class="close"
+            @click.prevent="showCalendar = false"
+            v-if="!showFilter"
+          >
             <img src="~/assets/svg/close.svg" alt="" />
           </span>
         </div>
@@ -546,7 +554,10 @@
             <p>Filter</p>
           </span>
         </div>
-        <div class="search__mobiletop--item" @click.prevent="showCalendar = true">
+        <div
+          class="search__mobiletop--item"
+          @click.prevent="showCalendar = true"
+        >
           <span class="calender">
             <img src="~/assets/svg/calender.svg" alt="" />
           </span>
@@ -670,7 +681,7 @@ export default {
       align-items: center;
       width: 12rem;
       justify-content: center;
-      border-radius: 3rem;
+      border-radius: 10rem;
       font-size: 1.6rem;
 
       & span {
