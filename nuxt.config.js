@@ -63,8 +63,9 @@ export default {
       "~/assets/scss/utils/btn.scss",
       "~/assets/scss/padding.scss",
       "~/assets/scss/form.scss",
-      "~/assets/scss/input.scss"
-      //"~/assets/scss/animations.scss"
+      "~/assets/scss/input.scss",
+      "~/assets/scss/input.scss",
+      "~/assets/scss/mobile-auth.scss"
     ]
   },
   /*
