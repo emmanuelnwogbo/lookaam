@@ -1,5 +1,5 @@
 <template>
-  <div class="logo">
+  <div class="logo" @click="$router.push('/')">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="101"
@@ -14,3 +14,9 @@
     </svg>
   </div>
 </template>
+
+<style lang="scss">
+.logo {
+  cursor: pointer;
+}
+</style>

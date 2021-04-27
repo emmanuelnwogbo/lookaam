@@ -9,12 +9,16 @@
           <SearchIcon />
         </span>
         <span>
-          <input type="text" placeholder="Search for a location" />
+          <input
+            type="text"
+            placeholder="Search for a location"
+            @keypress="search"
+          />
         </span>
       </div>
       <div class="header__btns">
         <span>
-          <button class="btn btn-transparent">Become a Host</button>
+          <button class="btn btn-transparent" @click="$router.push('/signup')">Become a Host</button>
         </span>
         <span>
           <button class="btn btn-colored btn-landing">Login</button>
@@ -24,10 +28,10 @@
 
     <div class="header mobile" v-if="mobileWidth">
       <div class="header__mobiletop header__mobilearea">
-        <figure>
+        <figure @click="$router.push('/')">
           <img src="~/assets/svg/logo.svg" alt="" />
         </figure>
-        <figure>
+        <figure @click="toggleSidenav">
           <img src="~/assets/svg/menuburger.svg" alt="" />
         </figure>
       </div>
@@ -41,10 +45,21 @@
               class="mobile"
               type="text"
               placeholder="Search for a location"
+              @keypress="search"
             />
           </span>
         </div>
       </div>
+    </div>
+
+    <div
+      v-bind:class="{
+        invisible: !mobileWidth,
+        invisible: !sidenav,
+        anim: true,
+      }"
+    >
+      <Sidenav :toggleSidenav="toggleSidenav" />
     </div>
   </div>
 </template> 
@@ -52,16 +67,33 @@
 <script>
 import Logo from "@/components/Logo";
 import SearchIcon from "@/components/SearchIcon";
+import Sidenav from "@/components/Sidenav";
 import mobilecheck from "@/mixins/mobilecheck";
 
 export default {
   name: "Header",
   data() {
-    return {};
+    return {
+      sidenav: false,
+    };
+  },
+  methods: {
+    toggleSidenav() {
+      this.sidenav ? (this.sidenav = false) : (this.sidenav = true);
+    },
+    search(event) {
+      const btn = event.key;
+      if (btn === "Enter") {
+        const search_terms = event.target.value;
+        this.$store.dispatch("search", search_terms);
+        this.$router.push("/search");
+      }
+    },
   },
   components: {
     Logo,
     SearchIcon,
+    Sidenav,
   },
   computed: {},
   mixins: [mobilecheck],
@@ -153,5 +185,19 @@ export default {
       }
     }
   }
+}
+
+.anim {
+  transition: all 0.3s ease;
+  z-index: 201;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+}
+
+.invisible {
+  transform: translateX(153rem);
 }
 </style>

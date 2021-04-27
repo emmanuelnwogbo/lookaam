@@ -43,94 +43,19 @@
           <span>Date</span>
         </div>
       </div>
-      <div class="search__container">
+      <div class="search__container" v-if="properties">
         <div class="search__cards">
-          <div class="search__card">
+          <div
+            class="search__card"
+            v-for="(property, index) in properties"
+            :key="index"
+          >
             <LocationCard
               :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
               :name="'Redeem church'"
               :propertyType="'Church'"
               :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
-            />
-          </div>
-          <div class="search__card">
-            <LocationCard
-              :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-              :name="'Redeem church'"
-              :propertyType="'Church'"
-              :cost="'#10,000/day'"
+              :property="property"
             />
           </div>
         </div>
@@ -346,12 +271,12 @@
         </div>
       </div>
 
-      <div class="search__loadmore">
+      <!--<div class="search__loadmore">
         <span><p>Loading more...</p></span
         ><span>
           <p>Sorry, no result with the location</p>
         </span>
-      </div>
+      </div>-->
     </div>
 
     <div class="search search__mobile" v-if="mobileWidth">
@@ -567,61 +492,18 @@
         </div>
       </div>
 
-      <div class="search__mobilecards">
-        <div class="search__mobilecard">
+      <div class="search__mobilecards" v-if="properties">
+        <div
+          class="search__mobilecard"
+          v-for="(property, index) in properties"
+          :key="index"
+        >
           <LocationCard
             :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
             :name="'Redeem church'"
             :propertyType="'Church'"
             :cost="'#10,000/day'"
-          />
-        </div>
-        <div class="search__mobilecard">
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div class="search__mobilecard">
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div class="search__mobilecard">
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div class="search__mobilecard">
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div class="search__mobilecard">
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div class="search__mobilecard">
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
+            :property="property"
           />
         </div>
       </div>
@@ -661,6 +543,10 @@ export default {
   computed: {
     filterDropdown() {
       return ["Studio", "Church", "Atrium"];
+    },
+    properties() {
+      const properties = this.$store.getters.searchedProperties.results;
+      return properties;
     },
   },
 };

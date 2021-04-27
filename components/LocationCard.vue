@@ -1,7 +1,7 @@
 <template>
-  <div class="locationcard">
+  <div class="locationcard" @click="open_property">
     <figure class="locationcard__area">
-      <img :src="image" alt="" />
+      <img :src="image" alt="" v-if="image" />
     </figure>
     <div
       class="locationcard__text locationcard__area"
@@ -14,7 +14,7 @@
         <span
           v-bind:class="{
             mobileWidth,
-            search__heart: mobileWidth
+            search__heart: mobileWidth,
           }"
         >
           <img src="~/assets/svg/heart_white.svg" alt="" />
@@ -26,9 +26,9 @@
           mobileWidth,
         }"
       >
-        <span>{{ name }}</span>
-        <span>{{ propertyType }}</span>
-        <span>{{ cost }}</span>
+        <span>{{ property.title }}</span>
+        <span>{{ property.typeof }}</span>
+        <span>₦{{ property.price }}/day</span>
       </div>
     </div>
   </div>
@@ -39,11 +39,29 @@ import mobilecheck from "@/mixins/mobilecheck";
 
 export default {
   name: "LocationCard",
+  data() {
+    return {
+      image: "",
+    };
+  },
   props: {
-    image: String,
-    name: String,
+    name: String, 
     propertyType: String,
     cost: String,
+    property: Object,
+  },
+  methods: {
+    open_property() {
+      this.$router.push(`/property/${this.property._id}`);
+    },
+  },
+  mounted() {
+    this.$store
+      .dispatch("get_property_photos", this.property["_id"])
+      .then((data) => {
+        console.log(data);
+        this.image = data[0].location;
+      });
   },
   mixins: [mobilecheck],
 };
@@ -54,7 +72,7 @@ export default {
   position: relative;
   overflow: hidden;
   border-radius: 0.4rem;
-
+  cursor: pointer;
   width: 100%;
   height: 100%;
   flex-shrink: 0;

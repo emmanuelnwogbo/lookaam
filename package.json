@@ -9,8 +9,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "nuxt": "^2.14.0",
     "slideout": "^1.0.1",
+    "swiper": "^6.5.6",
     "vue-functional-calendar": "^2.9.4"
   },
   "devDependencies": {

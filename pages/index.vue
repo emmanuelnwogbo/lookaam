@@ -23,149 +23,70 @@
       >
         Discover places
       </h3>
-      <div class="landing__cards">
+
+      <div
+        v-bind:class="{
+          swiper_container: mobileWidth,
+        }"
+      >
         <div
-          class="landing__card"
+          class="landing__cards swiper-container"
           v-bind:class="{
             mobileWidth,
+            invisible: mobileWidth,
           }"
         >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
+          <div class="swiper-wrapper">
+            <div
+              class="landing__card"
+              v-for="(property, index) in properties"
+              :key="index"
+              v-bind:class="{
+                mobileWidth,
+              }"
+            >
+              <LocationCard
+                :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+                :name="'Redeem church'"
+                :propertyType="'Church'"
+                :cost="'#10,000/day'"
+                :property="property"
+              />
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div
+        v-bind:class="{
+          swiper_container: mobileWidth,
+        }"
+      >
         <div
-          class="landing__card"
+          class="landing__cards swiper-container"
           v-bind:class="{
             mobileWidth,
+            invisible: !mobileWidth,
           }"
         >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
-        </div>
-        <div
-          class="landing__card"
-          v-bind:class="{
-            mobileWidth,
-          }"
-        >
-          <LocationCard
-            :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
-            :name="'Redeem church'"
-            :propertyType="'Church'"
-            :cost="'#10,000/day'"
-          />
+          <div class="swiper-wrapper">
+            <div
+              class="landing__card swiper-slide"
+              v-for="(property, index) in properties"
+              :key="index"
+              v-bind:class="{
+                mobileWidth,
+              }"
+            >
+              <LocationCard
+                :image="'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'"
+                :name="'Redeem church'"
+                :propertyType="'Church'"
+                :cost="'#10,000/day'"
+                :property="property"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -174,7 +95,7 @@
           mobileWidth,
         }"
       >
-        <span>See more places</span>
+        <span @click="seemore">See more places</span>
         <span>></span>
       </div>
     </div>
@@ -311,12 +232,37 @@
 import LocationCard from "@/components/LocationCard";
 import mobilecheck from "@/mixins/mobilecheck";
 
+import Swiper from "swiper";
+
 export default {
   data() {
     return {};
   },
   components: {
     LocationCard,
+  },
+  computed: {
+    properties() {
+      const properties = this.$store.getters.properties.results;
+      return properties;
+    },
+  },
+  methods: {
+    seemore() {
+      this.$router.push("/search");
+    },
+  },
+  mounted() {
+    console.log(this.mobileWidth, Swiper);
+    const swiper = new Swiper(".swiper-container", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
   },
   mixins: [mobilecheck],
 };
@@ -529,5 +475,44 @@ export default {
       }
     }
   }
+}
+
+.invisible {
+  display: none;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  /*text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  /*display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;*/
+  height: 96rem !important;
+  width: 103rem !important;
+  flex-shrink: 0;
+  margin-right: 6.1rem;
+  border-radius: 2rem;
+  overflow: hidden;
 }
 </style>
